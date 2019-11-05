@@ -1,0 +1,53 @@
+int i=0 , j=0; 
+int checker = 1;  
+--------------------------------------------  
+ 
+int row1 , row2 , col1 , col2; 
+string row01,row02,col01,col02; 
+row01=jTextField1.getText(); 
+col01=jTextField2.getText(); 
+row02=jTextField3.getText(); 
+col02=jTextField4.getText();  
+
+row1 = Integer.parseInt(row01); 
+col1 = Integer.parseInt(col01); 
+row2 = Integer.parseInt(row02); 
+col2 = Integer.parseInt(col02);
+  
+double[][] array1 = new int[row1][col1]; 
+double[][] array2 = new int[row2][col2];  
+
+String getter =jTextField5.getText(); 
+double temp=Double.parseDouble(getter);  
+
+
+if(i<row1 && checker ==1 ){ 
+ if(j<col1){ 
+  array1[i][j]=temp;
+j++; 
+jTextField5.setText(""); 
+jTextPane1.setText(jTextPane1.getText + array1[i][j] + " "); 
+} 
+if (j==col1 -1){ 
+j=0; 
+i++; 
+} 
+else{ 
+checker = 2; 
+} 
+}  
+
+ if(i<row2 && checker ==2 ){   
+  
+
+if(j<col2){
+array2[i][j]=temp;
+j++; 
+jTextField5.setText(""); 
+jTextPane2.setText(jTextPane2.getText + array2[i][j] + " "); 
+} 
+if (j==col2 -1){ 
+j=0; 
+i++; 
+} 
+}
